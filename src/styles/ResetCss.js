@@ -33,6 +33,9 @@ const ResetCss = createGlobalStyle`
         width: 100%;
         height: 100%;
         font-family: 'Lexend Deca', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: #212121;
     }
 
     ol, ul {

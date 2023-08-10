@@ -1,18 +1,21 @@
 import { Container } from "./Styled";
 import StyledInput from "../../Components/StyledInput";
-import StyledForm from "../../Components/StyledForm";
-import StyledTitle from "../../Components/StyledTitle";
+import { StyledFormLogin } from "../../Components/StyledForm";
+import { StyledTitleLogin } from "../../Components/StyledTitle";
 import StyledButton from "../../Components/StyledButton";
-import StyledLink from "../../Components/StyledLink";
+import { StyledLinkLogin } from "../../Components/StyledLink";
+import {MdEmail} from 'react-icons/md';
+import {HiLockClosed} from 'react-icons/hi';
+import { StyledIconsLogin } from "../../Components/StyledIcons";
 
 export default function Login(){
     return(
         <Container>
-            <StyledTitle>
+            <StyledTitleLogin>
                 <h1>STAR</h1>
                 <h2>MODELS</h2>
-            </StyledTitle>
-            <StyledForm>
+            </StyledTitleLogin>
+            <StyledFormLogin>
                 <StyledInput
                     name="email"
                     placeholder="Email"
@@ -29,10 +32,14 @@ export default function Login(){
                 <StyledButton type="submit">
                         Entrar
                 </StyledButton>
-            </StyledForm>
-            <StyledLink to="/register">
-                Não tenho uma contas
-            </StyledLink>
+            </StyledFormLogin>
+            <StyledIconsLogin>
+                <span><MdEmail/></span>
+                <span><HiLockClosed/></span>
+            </StyledIconsLogin>
+            <StyledLinkLogin to="/register">
+                Não tenho uma conta
+            </StyledLinkLogin>
         </Container>
     )
 }

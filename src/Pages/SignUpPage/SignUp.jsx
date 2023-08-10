@@ -1,18 +1,24 @@
 import { Container } from "./Styled";
 import StyledInput from "../../Components/StyledInput";
-import StyledForm from "../../Components/StyledForm";
-import StyledTitle from "../../Components/StyledTitle";
+import { StyledFormSignUp } from "../../Components/StyledForm";
 import StyledButton from "../../Components/StyledButton";
-import StyledLink from "../../Components/StyledLink";
+import { StyledLinkSignUp } from "../../Components/StyledLink";
+import { StyledIconsSignUp } from "../../Components/StyledIcons";
+import {HiLockClosed} from 'react-icons/hi';
+import {FaUser} from 'react-icons/fa';
+import { StyledTitleSignUp } from "../../Components/StyledTitle";
+import {TbAd2} from 'react-icons/tb';
+import {MdEmail} from 'react-icons/md';
+import {BsFillTelephoneFill} from 'react-icons/bs';
 
 export default function SignUp(){
     return(
         <Container>
-            <StyledTitle>
+            <StyledTitleSignUp>
                 <h1>STAR</h1>
                 <h2>MODELS</h2>
-            </StyledTitle>
-            <StyledForm>
+            </StyledTitleSignUp>
+            <StyledFormSignUp>
                 <StyledInput
                     name="name"
                     placeholder="Nome"
@@ -57,10 +63,18 @@ export default function SignUp(){
                 <StyledButton type="submit">
                     Cadastrar
                 </StyledButton>
-            </StyledForm>
-            <StyledLink to="/">
+            </StyledFormSignUp>
+            <StyledIconsSignUp>
+                <span><FaUser/></span>
+                <span><TbAd2/></span>
+                <span><BsFillTelephoneFill/></span>
+                <span><MdEmail/></span>
+                <span><HiLockClosed/></span>
+                <span><HiLockClosed/></span>
+            </StyledIconsSignUp>
+            <StyledLinkSignUp to="/">
                 Já tenho uma conta
-            </StyledLink>
+            </StyledLinkSignUp>
         </Container>
     )
 }
