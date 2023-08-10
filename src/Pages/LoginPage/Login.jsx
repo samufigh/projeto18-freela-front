@@ -31,7 +31,7 @@ export default function Login(){
                 </StyledButton>
             </StyledForm>
             <StyledLink to="/register">
-                Não tenho uma conta
+                Não tenho uma contas
             </StyledLink>
         </Container>
     )

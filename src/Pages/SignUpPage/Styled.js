@@ -7,8 +7,8 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url('src/assets/backgroundLogin.png');
+    background-image: url('src/assets/backgroundSignUp.png');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
-`
+    `
