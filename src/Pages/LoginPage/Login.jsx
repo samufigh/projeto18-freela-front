@@ -34,15 +34,15 @@ export default function Login(){
                     required
                 />
                 <StyledButton type="submit">
-                        Entrar
+                        Sign In
                 </StyledButton>
             </StyledFormLogin>
             <StyledIconsLogin>
                 <span><MdEmail/></span>
                 <span><HiLockClosed/></span>
             </StyledIconsLogin>
-            <StyledLinkLogin to="/register">
-                Don't have an account? Click here!
+            <StyledLinkLogin to="/signup">
+                Don't have an account? Click here
             </StyledLinkLogin>
             <StyledPresentation>
                 <img src={icon} alt="TrackIt" />

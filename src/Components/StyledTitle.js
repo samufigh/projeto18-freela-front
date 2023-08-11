@@ -2,7 +2,7 @@ import { styled } from "styled-components"
 
 export const StyledTitleLogin = styled.div` 
     margin-top: 190px;
-    margin-bottom: 35px;
+    margin-bottom: 3px;
     margin-left: 13px;
     h1{
         margin-left: 45px;
@@ -38,21 +38,20 @@ export const StyledTitleSignUp = styled.div`
         justify-content: center;
         color: #FFF;
         text-align: center;
-        font-family: Abhaya Libre;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 700;
+        font-family: Yipes;
+        font-size: 70px;
+        font-style: normal; 
         line-height: 23px;
         letter-spacing: 60px;
         margin-bottom: 20px;
     }
     h2{
+        margin-top: 50px;
         color: #FFF;
         text-align: center;
-        font-family: Abhaya Libre;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
+        font-family: Yipes;
+        font-size: 25px;
+        font-style: normal; 
         line-height: 10px;
         letter-spacing: 26px;
     }

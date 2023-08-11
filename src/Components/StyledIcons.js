@@ -13,8 +13,8 @@ export const StyledIconsLogin = styled.div`
 `;
 export const StyledIconsSignUp = styled.div`
     position: relative;
-    bottom: 40px;
-    right: 89px;
+    bottom: 43px;
+    right: 320px;
     font-size: 30px;
     display: flex;
     flex-direction: column;

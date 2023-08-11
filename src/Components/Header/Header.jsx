@@ -6,11 +6,15 @@ export default function Header() {
 
   return (
     <Container>
-      <button>SIGN IN</button>
-      <Link to="/hoje">
+      <Link to="/">
+        <button>SIGN IN</button>
+      </Link>
+      <Link to="/home">
         <img src={logo} alt="Logo" />
       </Link>
-      <button>SIGN UP</button>
+      <Link to="/signup">
+        <button>SIGN UP</button>
+      </Link>
     </Container>
   )
 }

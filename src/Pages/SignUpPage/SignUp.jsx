@@ -10,10 +10,14 @@ import { StyledTitleSignUp } from "../../Components/StyledTitle";
 import {TbAd2} from 'react-icons/tb';
 import {MdEmail} from 'react-icons/md';
 import {BsFillTelephoneFill} from 'react-icons/bs';
+import Header from "../../Components/Header/Header";
+import { StyledPresentation } from "../../Components/StyledPresentation";
+import icon from "../../assets/sgDividerIcon.png";
 
 export default function SignUp(){
     return(
         <Container>
+            <Header/>
             <StyledTitleSignUp>
                 <h1>STAR</h1>
                 <h2>MODELS</h2>
@@ -21,7 +25,7 @@ export default function SignUp(){
             <StyledFormSignUp>
                 <StyledInput
                     name="name"
-                    placeholder="Nome"
+                    placeholder="Name"
                     type="name"
                     required
                 />
@@ -35,7 +39,7 @@ export default function SignUp(){
                 <p>.</p>
                 <StyledInput
                     name="telephone"
-                    placeholder="Telefone"
+                    placeholder="Telephone"
                     type="telephone"
                     required
                 />
@@ -49,19 +53,19 @@ export default function SignUp(){
                 <p>.</p>
                 <StyledInput
                     name="password"
-                    placeholder="Senha"
+                    placeholder="Password"
                     type="password"
                     required
                 />
                 <p>.</p>
                 <StyledInput
                     name="confirm-password"
-                    placeholder="Confirmar Senha"
+                    placeholder="Confirm Password"
                     type="password"
                     required
                 />
                 <StyledButton type="submit">
-                    Cadastrar
+                    Sign Up
                 </StyledButton>
             </StyledFormSignUp>
             <StyledIconsSignUp>
@@ -73,8 +77,11 @@ export default function SignUp(){
                 <span><HiLockClosed/></span>
             </StyledIconsSignUp>
             <StyledLinkSignUp to="/">
-                Já tenho uma conta
+                Have an account? Sign In
             </StyledLinkSignUp>
+            <StyledPresentation>
+                <img src={icon} alt="TrackIt" />
+            </StyledPresentation>
         </Container>
     )
 }

@@ -1,14 +1,13 @@
 import { styled } from "styled-components"
 
 export const Container = styled.div`
-    margin-top: 40px;
     background-color: lightcoral;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url('src/assets/backgroundSignUp.png');
+    background-image: url('src/assets/sgLandingBackground.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 

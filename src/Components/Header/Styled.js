@@ -14,22 +14,24 @@ const Container = styled.header`
   z-index: 1;
   background: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
     img {
     height: 50px;
     cursor: pointer;
   }
 
     button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 20px;
       border: 0px;
       border-radius: 5px;
       width: 90px;
       height: 30px;
-      color: white;
-      background-image: url('src/assets/sgLandingBackground.jpg');
-      background-size: cover; 
-      background-repeat: no-repeat; 
-      background-position: center center;
+      color: #011075;
+      cursor: pointer;
+      background-color: white;
     }
 `
 
