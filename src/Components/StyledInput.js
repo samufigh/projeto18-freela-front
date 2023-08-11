@@ -2,7 +2,7 @@ import { styled } from "styled-components"
 
 const StyledInput = styled.input`
     height: 43px;
-    width: 202px;
+    width: 670px;
     font-family: Roboto;
     font-size: 16px;
     margin-top: 10px;

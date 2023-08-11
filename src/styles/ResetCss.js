@@ -33,9 +33,6 @@ const ResetCss = createGlobalStyle`
         width: 100%;
         height: 100%;
         font-family: 'Lexend Deca', sans-serif;
-        display: flex;
-        justify-content: center;
-        background-color: #212121;
     }
 
     ol, ul {
@@ -67,6 +64,12 @@ const ResetCss = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Lexend Deca', sans-serif;
     }
+    @font-face {
+    font-family: 'Yipes';
+    src: url('public/Yipes-Regular-8a1b45b09df7aa218735983abc5a2933.woff2') format('truetype'); /* Caminho da fonte */
+    /* Outras propriedades, como font-weight e font-style, também podem ser definidas aqui */
+
+}
 `
 
 export default ResetCss

@@ -1,15 +1,16 @@
 import { styled } from "styled-components"
 
 export const StyledFormLogin = styled.form`
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
-  width: 246px; 
+  width: 700px; 
   border-radius: 10px;
   p{
     margin-top: 10px;
-    width: 202px;
+    width: 670px;
     height: 1px;
     background-color: #8D8D8D;
     padding-left: 10px;

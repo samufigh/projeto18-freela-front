@@ -3,7 +3,7 @@ import { styled } from "styled-components"
 export const StyledIconsLogin = styled.div`
     position: relative;
     bottom: 146px;
-    right: 89px;
+    right: 320px;
     font-size: 30px;
     display: flex;
     flex-direction: column;
