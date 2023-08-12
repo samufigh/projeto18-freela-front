@@ -1,7 +1,7 @@
 import { styled } from "styled-components"
 
 export const Container = styled.div`
-    height: 2150px;
+    height: 1850px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -9,8 +9,7 @@ export const Container = styled.div`
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
-    @media (max-width: 1200px) {
-    width: 100vh;
-    height: 100vh;
+    .background{
+        width: 100%;
     }
     `

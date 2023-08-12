@@ -5,6 +5,7 @@ import Home from "./Pages/HomePage/Home"
 import InfoModel from "./Pages/InfoModel/InfoModel"
 import MyPets from "./Pages/Mypets/MyPets"
 import AddPets from "./Pages/AddPet/AddPet"
+import MyProfile from "./Pages/MyProfile/MyProfile"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/pet" element={<InfoModel/>}/>
         <Route path="/myPets" element={<MyPets/>}/>
         <Route path="/addPet" element={<AddPets/>}/>
+        <Route path="/myProfile" element={<MyProfile/>}/>
       </Routes>
     </BrowserRouter>
     </>

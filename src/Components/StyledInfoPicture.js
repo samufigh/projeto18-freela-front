@@ -9,6 +9,8 @@ export const StyledInfoPicture = styled.div`
         margin-top: 15px;
         border: 1px solid #FEB7FF;
         width: 900px;
+        height: 550px;
+        object-fit: cover;
     }
     div{
     padding: 30px;

@@ -80,6 +80,7 @@ export const StyledTitleMain = styled.div`
         font-weight: 700;
     }
     h2{
+        margin-left: 35px;
         margin-top: 50px;
         color: #FFF;
         text-align: center;
