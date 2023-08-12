@@ -1,5 +1,5 @@
 import { Container } from "./Styled";
-import StyledInput from "../../Components/StyledInput";
+import {StyledInput} from "../../Components/StyledInput";
 import { StyledFormSignUp } from "../../Components/StyledForm";
 import StyledButton from "../../Components/StyledButton";
 import { StyledLinkSignUp } from "../../Components/StyledLink";

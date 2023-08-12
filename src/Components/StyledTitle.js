@@ -127,3 +127,36 @@ export const StyledTitle = styled.div`
         letter-spacing: 56px;
     }
 `
+
+export const StyledTitleProfile = styled.div`
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        color: #FFF;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 50px;
+        font-style: normal; 
+        line-height: 23px;
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    h2{
+        margin-top: 15px;
+        color: #FFF;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal; 
+        line-height: 10px;
+        letter-spacing: 56px;
+        margin-left: 30px;
+    }
+`
