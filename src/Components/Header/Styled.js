@@ -20,7 +20,7 @@ const Container = styled.header`
   }
 
     button{
-      display: flex;
+      display: ${(props) => (props.logged ? "none" : "flex")};
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -32,6 +32,9 @@ const Container = styled.header`
       color: #011075;
       cursor: pointer;
       background-color: white;
+    }
+    div{
+      display: ${(props) => (props.logged ? "flex" : "none")};
     }
 `
 
