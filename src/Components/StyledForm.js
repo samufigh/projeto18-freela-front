@@ -16,7 +16,7 @@ export const StyledFormLogin = styled.form`
     padding-left: 10px;
   }
 `
-
+  
 export const StyledFormSignUp = styled.form`
   position: fixed;
   bottom: 193px;
@@ -57,7 +57,7 @@ export const StyledFormAddPet = styled.form`
     color: #FEB7FF;
   }
   h2{
-    margin-right: 513px;
+    margin-right: 511px;
     margin-top: 30px;
     color: #FEB7FF;
   }
