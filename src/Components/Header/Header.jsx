@@ -1,10 +1,18 @@
 import Container from "./Styled";
 import logo from "../../assets/icone.jpg";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [isLogged, setIsLogged] = useState(true);
+  const [isLogged, setIsLogged] = useState(false);
+    useEffect(() => {
+      const token = localStorage.token
+    if(token){
+      setIsLogged(true)
+    } else {
+      setIsLogged(false)
+  }
+  }, [])
 
   return (
     <Container logged={isLogged}>

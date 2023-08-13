@@ -9,6 +9,28 @@ import { Cards } from "../../Components/StyledCards"
 import CardMyModel from "../../Components/CardMyModel/CardMyModel"
 
 export default function MyPets(){
+    const token = localStorage.token
+    const navigate = useNavigate()
+    useEffect(() => {
+    if (!token) {
+        navigate("/");
+        return;
+      }
+    console.log(token)
+    const authentication = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+    };
+    const res = apiAuth.pets(authentication);
+    res.then((res) => {
+        console.log(res.data)
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+
+    }, []);
     return(
         <Container>
             <Header/>

@@ -8,6 +8,28 @@ import picture from "../../assets/Neeko_10.jpg";
 import { StyledInfoText } from "../../Components/StyledInfoText";
 
 export default function InfoModel(){
+    const token = localStorage.token
+    const navigate = useNavigate()
+    useEffect(() => {
+    if (!token) {
+        navigate("/");
+        return;
+      }
+    console.log(token)
+    const authentication = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+    };
+    const res = apiAuth.pets(authentication);
+    res.then((res) => {
+        console.log(res.data)
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+
+    }, []);
     return(
         <Container>
             <Header/>

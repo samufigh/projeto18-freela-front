@@ -12,5 +12,10 @@ function signUp(body) {
     return promise
 }
 
-const apiAuth = { login, signUp } 
+function pets(){
+    const promise = axios.get(`${BASE_URL}/models`)
+    return promise
+}
+
+const apiAuth = { login, signUp, pets } 
 export default apiAuth

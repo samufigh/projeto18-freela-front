@@ -10,12 +10,16 @@ import { StyledIconsLogin } from "../../Components/StyledIcons";
 import Header from "../../Components/Header/Header";
 import { StyledPresentation } from "../../Components/StyledPresentation";
 import icon from "../../assets/sgDividerIcon.png"
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import apiAuth from "../../services/ApiAuth";
+import { UserContext } from "../../contexts/UserContext";
 
 export default function Login(){
     const [loading, setLoading] = useState(false);
+    const {user, setUser} = useContext(UserContext)
+    console.log(user)
+
     const [form, setForm] = useState({
         email: "",
         password: "",
@@ -33,7 +37,10 @@ export default function Login(){
           apiAuth.login(form)
             .then(res => {
                 setLoading(false)
-                console.log(res.data)
+                const token = res.data.token
+                setUser(token)
+                localStorage.setItem("token", token)
+                console.log(res.data.token)
                 navigate("/home")
             })
             .catch(err => {
