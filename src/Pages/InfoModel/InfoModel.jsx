@@ -6,22 +6,18 @@ import { StyledProfiles } from "../../Components/StyledProfiles";
 import { StyledInfoPicture } from "../../Components/StyledInfoPicture";
 import picture from "../../assets/Neeko_10.jpg";
 import { StyledInfoText } from "../../Components/StyledInfoText";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import apiAuth from "../../services/ApiAuth";
+import { useParams } from "react-router-dom";
 
 export default function InfoModel(){
     const token = localStorage.token
     const navigate = useNavigate()
+    const {id} = useParams
+    console.log(id)
     useEffect(() => {
-    if (!token) {
-        navigate("/");
-        return;
-      }
-    console.log(token)
-    const authentication = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-    };
-    const res = apiAuth.pets(authentication);
+    const res = apiAuth.pet(id);
     res.then((res) => {
         console.log(res.data)
       })
