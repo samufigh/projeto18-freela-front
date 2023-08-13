@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = "http://localhost:5173"
+const BASE_URL = "http://localhost:5000"
 
 function login(body) {
     const promise = axios.post(`${BASE_URL}/signin`, body)

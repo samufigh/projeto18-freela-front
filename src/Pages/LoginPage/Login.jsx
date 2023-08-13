@@ -10,8 +10,37 @@ import { StyledIconsLogin } from "../../Components/StyledIcons";
 import Header from "../../Components/Header/Header";
 import { StyledPresentation } from "../../Components/StyledPresentation";
 import icon from "../../assets/sgDividerIcon.png"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import apiAuth from "../../services/ApiAuth";
 
 export default function Login(){
+    const [loading, setLoading] = useState(false);
+    const [form, setForm] = useState({
+        email: "",
+        password: "",
+      })
+    const navigate = useNavigate()
+
+    function handleForm(e) {
+        setForm({...form, [e.target.name]: e.target.value })
+    }
+
+    function signIn(e) {
+        e.preventDefault();
+        setLoading(true);
+        
+          apiAuth.login(form)
+            .then(res => {
+                setLoading(false)
+                console.log(res.data)
+                navigate("/home")
+            })
+            .catch(err => {
+                setLoading(false)
+                console.log(err.response.data)
+            })
+        }
     return(
         <Container>
             <Header/>
@@ -19,12 +48,14 @@ export default function Login(){
                 <h1>STAR</h1>
                 <h2>MODELS</h2>
             </StyledTitleLogin>
-            <StyledFormLogin>
+            <StyledFormLogin onSubmit={signIn}>
                 <StyledInput
                     name="email"
                     placeholder="Email"
                     type="email"
                     required
+                    value={form.email}
+                    onChange={handleForm}
                 />
                 <p>.</p>
                 <StyledInput
@@ -32,6 +63,8 @@ export default function Login(){
                     placeholder="Password"
                     type="password"
                     required
+                    value={form.password}
+                    onChange={handleForm}
                 />
                 <StyledButton type="submit">
                         Sign In
