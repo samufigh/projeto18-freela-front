@@ -72,3 +72,45 @@ export const StyledFormAddPet = styled.form`
     color: #FEB7FF;
   }
 `
+
+export const StyledFormMyProfile = styled.form`
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4A2039;
+  width: 700px; 
+  border-radius: 10px;
+  p{
+    margin-top: 10px;
+    width: 590px;
+    height: 1px;
+    background-color: white;
+    padding-left: 10px;
+  }
+  h1{
+    margin-right: 550px;
+    margin-top: 30px;
+    color: #FEB7FF;
+  }
+  h2{
+    margin-right: 511px;
+    margin-top: 30px;
+    color: #FEB7FF;
+  }
+  h3{
+    margin-right: 552px;
+    margin-top: 30px;
+    color: #FEB7FF;
+  }
+  span{
+    margin-right: 542px;
+    margin-top: 30px;
+    color: #FEB7FF;
+  }
+  ul{
+    margin-right: 519px;
+    margin-top: 30px;
+    color: #FEB7FF;
+  }
+`

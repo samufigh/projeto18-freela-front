@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 
 export const Cards = styled.div`
+    position: relative;
+    bottom: 300px;
     max-width: 1800px;
     display: flex;
     justify-content: flex-start;

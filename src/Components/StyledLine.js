@@ -15,7 +15,16 @@ export const StyledLine = styled.div`
     }
     img{
         position: relative;
-        bottom: 330px;
+        bottom: 400px;
         width: 100px;
+    }
+    h3{
+        color: #FEB7FF;
+        position: relative;
+        bottom: 430px;
+        width: 900px;
+        letter-spacing: 2px;
+        text-align: center;
+        line-height: 1.5;
     }
 `

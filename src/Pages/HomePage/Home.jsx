@@ -42,6 +42,7 @@ export default function Home() {
       </StyledTitleMain>
       <StyledLine>
         <span>.</span>
+        <h3>Whether you're a Star Guardian with a magical pet or a pet and fashion enthusiast, Star Models is where the magic happens. Join us in celebrating magic and cuteness as our beloved magical pets dazzle on the virtual runway!</h3>
         <img className="logo2" src={logo2} alt="Logo 2" />
       </StyledLine>
       <Cards>{cardModels}</Cards>

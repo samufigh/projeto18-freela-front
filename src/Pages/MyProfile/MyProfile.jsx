@@ -1,7 +1,7 @@
 import Header from "../../Components/Header/Header";
 import { StyledTitleProfile } from "../../Components/StyledTitle";
 import { Container } from "./Styled";
-import { StyledFormAddPet, StyledFormLogin } from "../../Components/StyledForm";
+import { StyledFormAddPet, StyledFormLogin, StyledFormMyProfile } from "../../Components/StyledForm";
 import { StyledInputForm } from "../../Components/StyledInput";
 import StyledButton from "../../Components/StyledButton";
 import StyledTextArea from "../../Components/StyledTextArea";
@@ -83,7 +83,7 @@ export default function MyProfile() {
                 <h2>ADD</h2>
                 <h1>STAR MODELS</h1>
             </StyledTitleProfile>
-            <StyledFormAddPet onSubmit={attInfo}>
+            <StyledFormMyProfile onSubmit={attInfo}>
                 <h1>Name</h1>
                 <StyledInputForm
                     name="name"
@@ -104,7 +104,7 @@ export default function MyProfile() {
                     onChange={handleForm}
                 />
                 <p>.</p>
-                <span>Telephone</span>
+                <ul>Telephone</ul>
                 <StyledInputForm
                     name="telephone"
                     placeholder="telephone"
@@ -136,7 +136,7 @@ export default function MyProfile() {
                 <StyledButton type="submit">
                     ADD
                 </StyledButton>
-            </StyledFormAddPet>
+            </StyledFormMyProfile>
         </Container>
     )
 }

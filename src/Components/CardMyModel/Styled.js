@@ -29,6 +29,7 @@ export const Card = styled.div`
             margin: 20px 40px 0px 40px;
             height: 150px;
             font-size: 15px;
+            word-wrap: break-word;
         }
         button{
             width: 230px;

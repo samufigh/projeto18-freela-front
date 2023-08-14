@@ -56,6 +56,7 @@ export default function MyPets() {
       </StyledTitleMain>
       <StyledLine>
         <span>.</span>
+        <h3>Welcome Star Guardian! We know that your magical pets are more than just companions, they are shining stars ready to enchant the world. With the availability function, you can control when your beloved pets are ready to shine on the runway and when they need a little rest.</h3>
         <img className="logo2" src={logo2} />
       </StyledLine>
       <Cards>{cardModels}</Cards>
