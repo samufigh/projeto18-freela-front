@@ -2,8 +2,7 @@ import { styled } from "styled-components"
 
 const StyledButton = styled.button`
     font-size: 16px;
-    background-image: url('src/assets/sgLandingBackground.jpg');
-    background-repeat: no-repeat; 
+    background-color: #030A2F;
     
     color: white;
     position: relative;
