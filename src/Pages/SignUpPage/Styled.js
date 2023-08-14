@@ -7,7 +7,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url('src/assets/sgLandingBackground.jpg');
+    background-image: url('https://universe.leagueoflegends.com/images/sgLandingBackground.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
