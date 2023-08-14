@@ -77,7 +77,7 @@ export default function InfoModel(){
                 <img className="userImg" src={model.userPicture}/>
             </StyledInfoText>
             <StyledInfoText>
-                <img className="petImg" src={model.userPicture}/>
+                <img className="petImg" src={model.picture}/>
                 <div className="pet">
                     <h2>MEET THE MAGICAL PET</h2>
                     <h1>{model.name}</h1>

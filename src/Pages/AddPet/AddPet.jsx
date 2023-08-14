@@ -6,32 +6,50 @@ import { StyledInputForm } from "../../Components/StyledInput";
 import StyledButton from "../../Components/StyledButton";
 import StyledTextArea from "../../Components/StyledTextArea";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import apiAuth from "../../services/ApiAuth";
 
 export default function AddPets(){
     const token = localStorage.token
     const navigate = useNavigate()
+
+    const [form, setForm] = useState({
+        name: "",
+        picture: "",
+        pictureUserPet: "",
+        description: ""
+      })
+
+    function handleForm(e) {
+        setForm({...form, [e.target.name]: e.target.value })
+    }
     useEffect(() => {
     if (!token) {
         navigate("/");
         return;
-      }
+    }
     console.log(token)
-    const authentication = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-    };
-    const res = apiAuth.addPet(authentication);
-    res.then((res) => {
-        console.log(res.data)
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-
     }, []);
+
+    function add(e){
+        e.preventDefault();
+
+        const config = {
+            headers: {
+                Authorization: "Bearer " + token
+            }
+        }
+         console.log(form);
+         console.log(config);
+            apiAuth.addPet(form, config)
+        .then((res) => {
+            console.log(res.data)
+        })
+        .catch((error) => {
+            alert(error.message);
+            alert("insira uma url valida")
+        });
+    }
     return(
         <Container>
             <Header/>
@@ -39,13 +57,15 @@ export default function AddPets(){
                 <h2>ADD</h2>
                 <h1>STAR MODELS</h1>
             </StyledTitleProfile>
-            <StyledFormAddPet>
+            <StyledFormAddPet onSubmit={add}>
                 <h1>Name</h1>
                 <StyledInputForm
                     name="name"
                     placeholder="Name"
                     type="name"
                     required
+                    value={form.name}
+                    onChange={handleForm}
                 />
                 <p>.</p>
                 <h3>Picture</h3>
@@ -54,6 +74,8 @@ export default function AddPets(){
                     placeholder="Picture"
                     type="picture"
                     required
+                    value={form.picture}
+                    onChange={handleForm}
                 />
                 <p>.</p>
                 <span>Picture with your pet</span>
@@ -62,6 +84,8 @@ export default function AddPets(){
                     placeholder="Picture"
                     type="picture"
                     required
+                    value={form.pictureUserPet}
+                    onChange={handleForm}
                 />
                 <p>.</p>
                 <h2>Description</h2>
@@ -70,6 +94,8 @@ export default function AddPets(){
                     placeholder="Description"
                     type="description"
                     required
+                    value={form.description}
+                    onChange={handleForm}
                 />
                 <StyledButton type="submit">
                         ADD
