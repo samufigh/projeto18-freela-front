@@ -37,6 +37,16 @@ function isAvailabled(body, auth, id){
     return promise
 }
 
+function getInfoUser(auth){
+    const promise = axios.get(`${BASE_URL}/user/info`, auth)
+    return promise
+}
 
-const apiAuth = { login, signUp, pets, pet, addPet, getMyPets, isAvailabled } 
+function attInfoUser(body, auth){
+    const promise = axios.put(`${BASE_URL}/user/info`,body,  auth)
+    return promise
+}
+
+
+const apiAuth = { login, signUp, pets, pet, addPet, getMyPets, isAvailabled, getInfoUser, attInfoUser } 
 export default apiAuth
