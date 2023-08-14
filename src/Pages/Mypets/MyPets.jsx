@@ -19,6 +19,7 @@ export default function MyPets() {
   const navigate = useNavigate()
   useEffect(() => {
     if (!token) {
+      localStorage.removeItem("token");
       navigate("/");
       return;
     }

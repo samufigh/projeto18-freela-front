@@ -16,6 +16,7 @@ export default function MyProfile() {
     
     useEffect(() => {
         if (!token) {
+            localStorage.removeItem("token");
             navigate("/");
             return;
         }
@@ -68,11 +69,11 @@ export default function MyProfile() {
         };
         apiAuth.attInfoUser(form, config)
             .then((res) => {
-                console.log(res.data);
+                alert(res.data);
             })
             .catch((error) => {
-                console.log(error.message);
-                alert("insira uma url valida");
+                console.log(error)
+                if(error.response.status===422) alert ("Insira informações validas")
             });
     }
     return (

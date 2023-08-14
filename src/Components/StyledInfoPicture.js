@@ -25,12 +25,20 @@ export const StyledInfoPicture = styled.div`
         font-size: 40px;
         font-weight: 700;
     }
-    p{
+    ul{
         margin-top: 25px;
         display: flex;
         justify-content: space-between;
-        h1{
+        .container{
+            padding: 30px;
+            position: relative;
+            bottom: 10px;
+            height: initial;
+            width: initial;
+            background-color:initial;
+            border: initial;
             color: white;
+            padding: initial;
             h2{
                 margin-bottom: 10px;
                 color: #FEB7FF;

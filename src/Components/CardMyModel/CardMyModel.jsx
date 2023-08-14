@@ -11,6 +11,7 @@ export default function CardMyModel({info}) {
     const navigate = useNavigate()
     useEffect(() => {
         if (!token) {
+        localStorage.removeItem("token");
         navigate("/");
         return;
         }
@@ -18,7 +19,7 @@ export default function CardMyModel({info}) {
     }, [])
 
     function isAvailable(id) {
-        console.log(id);
+        console.log(available);
         setAvailable(!available);
         const config = {available: info.available}
         const authentication = {
@@ -43,7 +44,7 @@ export default function CardMyModel({info}) {
                     <h1>{info.name}</h1>
                     <h2>{info.description}</h2>
                     <button onClick={() => isAvailable(info.id)}>
-                        {available ? "AVAILABLE" : "NOT AVAILABLE"}
+                        {available ? "AVAILABLE" : "UNAVAILABLE"}
                     </button>
                 </span>
             </div>

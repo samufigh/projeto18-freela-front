@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url('src/assets/starfallBackground.jpg');
+    background-image: url('https://universe.leagueoflegends.com/images/sgBioBackgroundLossySmall.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 

@@ -9,7 +9,6 @@ import { StyledLine } from "../../Components/StyledLine";
 import CardModel from "../../Components/CardModel/CardModel";
 import { Cards } from "../../Components/StyledCards";
 import apiAuth from "../../services/ApiAuth";
-import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [numCards, setNumCards] = useState(0);
@@ -18,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const res = apiAuth.pets();
     res.then((res) => {
-      console.log(res.data);
+      console.log(res.data);  
       setNumCards(res.data.length);
       setModels(res.data)
     }).catch((error) => {
@@ -30,15 +29,16 @@ export default function Home() {
   for (let i = 0; i < numCards; i++) {
     cardModels.push(<CardModel key={i} info={models[i]}/>);
   }
-
   return (
     <Container>
       <Header />
       <img className="background" src={background} />
       <StyledTitleMain>
-        <img className="logo" src={logo} alt="Logo" />
+      <img className="logo" src={logo} />
+      <div>
+        <h2>ADD</h2>
         <h1>STAR MODELS</h1>
-        <h2>DISPONÍVEIS</h2>
+      </div>
       </StyledTitleMain>
       <StyledLine>
         <span>.</span>

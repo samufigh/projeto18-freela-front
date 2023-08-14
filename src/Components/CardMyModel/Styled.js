@@ -36,7 +36,7 @@ export const Card = styled.div`
             margin: 20px 40px 10px 55px;
             cursor: pointer;
             border: 1px solid white;
-            background-color: ${(props) => (props.available==="AVAILABLE" ? "#690000" : "#032F00")};
+            background-color: ${(props) => (props.available===false ? "#690000" : "#032F00")};
             color: white;
             font-weight: 700;
             font-size: 15px;

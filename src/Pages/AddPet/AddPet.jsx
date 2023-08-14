@@ -25,6 +25,7 @@ export default function AddPets(){
     }
     useEffect(() => {
     if (!token) {
+        localStorage.removeItem("token");
         navigate("/");
         return;
     }
@@ -46,8 +47,9 @@ export default function AddPets(){
             console.log(res.data)
         })
         .catch((error) => {
-            alert(error.message);
-            alert("insira uma url valida")
+            console.log(error.response.status)
+            if(error.response.status===409) alert ("Pet com nome já cadastrado")
+            if(error.response.status===422) alert ("Insira um nome com até 10 caracteres e uma URL válida")
         });
     }
     return(
