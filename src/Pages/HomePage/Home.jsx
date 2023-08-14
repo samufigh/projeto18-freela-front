@@ -26,7 +26,6 @@ export default function Home() {
     });
   }, []);
 
-  // Crie um array de elementos CardModel com base em numCards
   const cardModels = [];
   for (let i = 0; i < numCards; i++) {
     cardModels.push(<CardModel key={i} info={models[i]}/>);

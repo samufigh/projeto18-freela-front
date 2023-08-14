@@ -13,6 +13,12 @@ export default function Header() {
       setIsLogged(false)
   }
   }, [])
+  function Logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("name");
+    navigate("/");
+  }
+
 
   return (
     <Container logged={isLogged}>
@@ -32,7 +38,7 @@ export default function Header() {
         <div>MY PROFILE</div>
       </Link>
       <Link to="/">
-        <div>LOGOUT</div>
+        <div onClick={Logout}>LOGOUT</div>
       </Link>
       <Link to="/signup">
         <button>SIGN UP</button>

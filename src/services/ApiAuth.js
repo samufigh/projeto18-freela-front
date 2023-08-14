@@ -27,6 +27,16 @@ function addPet(body, auth){
     return promise
 }
 
+function getMyPets(auth){
+    const promise = axios.get(`${BASE_URL}/models/me`, auth)
+    return promise
+}
 
-const apiAuth = { login, signUp, pets, pet, addPet } 
+function isAvailabled(body, auth, id){
+    const promise = axios.put(`${BASE_URL}/models/${id}`, body, auth)
+    return promise
+}
+
+
+const apiAuth = { login, signUp, pets, pet, addPet, getMyPets, isAvailabled } 
 export default apiAuth
