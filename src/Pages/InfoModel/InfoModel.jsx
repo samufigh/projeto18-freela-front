@@ -4,9 +4,7 @@ import { Container } from "./Styled";
 import logo from "../../assets/SGTitleCrest.png"
 import { StyledProfiles } from "../../Components/StyledProfiles";
 import { StyledInfoPicture } from "../../Components/StyledInfoPicture";
-import picture from "../../assets/Neeko_10.jpg";
 import { StyledInfoText } from "../../Components/StyledInfoText";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import apiAuth from "../../services/ApiAuth";
 import { useParams } from "react-router-dom";
@@ -25,13 +23,16 @@ export default function InfoModel(){
       });
 
     }, []);
+    
     console.log(model)
     return(
         <Container>
             <Header/>
             <StyledTitle>
-                <img className="logo" src={logo}/>
-                <h1>STAR MODELS</h1>
+            <img className="logo" src={logo} />
+            <div>
+                <h1>STAR MODEL</h1>
+            </div>
             </StyledTitle>
             <StyledProfiles>
             </StyledProfiles>
@@ -39,32 +40,32 @@ export default function InfoModel(){
                 <img src={model.pictureUserPet}/>
                 <div>
                     <span>{model.userName}</span>
-                    <p>
-                        <h1>
+                    <ul>
+                        <div className="container">
                             <h2>
                                 Telephone
                             </h2>
                             <h3>
                                 {model.telephone}
                             </h3>
-                        </h1>
-                        <h1>
+                        </div>
+                        <div className="container">
                             <h2>
                                 Email
                             </h2>
                             <h3>
                                 {model.email}
                             </h3>
-                        </h1>
-                        <h1>
+                        </div>
+                        <div className="container">
                             <h2>
                                 CPF
                             </h2>
                             <h3>
                                 {model.cpf}
                             </h3>
-                        </h1>
-                    </p>
+                        </div>
+                    </ul>
                 </div>
                 <ul className="linha1">.</ul>
                 <ul className="linha2">.</ul>
