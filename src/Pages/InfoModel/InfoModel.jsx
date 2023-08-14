@@ -7,25 +7,25 @@ import { StyledInfoPicture } from "../../Components/StyledInfoPicture";
 import picture from "../../assets/Neeko_10.jpg";
 import { StyledInfoText } from "../../Components/StyledInfoText";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import apiAuth from "../../services/ApiAuth";
 import { useParams } from "react-router-dom";
 
 export default function InfoModel(){
     const token = localStorage.token
-    const navigate = useNavigate()
-    const {id} = useParams
-    console.log(id)
+    const [model, setModel] = useState("")
+    const {id} = useParams()
     useEffect(() => {
-    const res = apiAuth.pet(id);
+    const res = apiAuth.pet(id)
     res.then((res) => {
-        console.log(res.data)
+        setModel(res.data)
       })
       .catch((error) => {
         alert(error.message);
       });
 
     }, []);
+    console.log(model)
     return(
         <Container>
             <Header/>
@@ -36,16 +36,16 @@ export default function InfoModel(){
             <StyledProfiles>
             </StyledProfiles>
             <StyledInfoPicture>
-                <img src={picture}/>
+                <img src={model.pictureUserPet}/>
                 <div>
-                    <span>AHRI</span>
+                    <span>{model.userName}</span>
                     <p>
                         <h1>
                             <h2>
                                 Telephone
                             </h2>
                             <h3>
-                                (19)99433-0867
+                                {model.telephone}
                             </h3>
                         </h1>
                         <h1>
@@ -53,7 +53,7 @@ export default function InfoModel(){
                                 Email
                             </h2>
                             <h3>
-                                fiddlesticks@gmail.com
+                                {model.email}
                             </h3>
                         </h1>
                         <h1>
@@ -61,7 +61,7 @@ export default function InfoModel(){
                                 CPF
                             </h2>
                             <h3>
-                                483.747.288-50
+                                {model.cpf}
                             </h3>
                         </h1>
                     </p>
@@ -71,17 +71,17 @@ export default function InfoModel(){
             </StyledInfoPicture>
             <StyledInfoText>
                 <div>
-                    <h2>ABOUT STAR GUARDIAN AHRI</h2>
-                    <h3>Ahri is a charismatic captain who leads a team of both new and veteran Star Guardians, from the outer edges of the cosmos. Having experienced the pain of losing teammates in the line of duty, she is viciously protective of her “family,” and a strong desire burns within her to ensure no one she cares for ever fades away again. These events have also shaped how she approaches other teams and their captains, especially the less experienced ones like Lux. There’s no more room for patience and understanding in her universe—tough love is all that’s left. Though that be the case, none are immune to Ahri’s own unique charms.</h3>
+                    <h2>ABOUT STAR GUARDIAN {model.userName}</h2>
+                    <h3>{model.userDescription}</h3>
                 </div>
-                <img className="userImg" src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltc7a97e75ee923e94/60ee122d8a77034ffea23386/ahri-bio.jpg"/>
+                <img className="userImg" src={model.userPicture}/>
             </StyledInfoText>
             <StyledInfoText>
-                <img className="petImg" src="https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3675a107d939912f/60ee12305397524ead389183/ahri-familiar.jpg"/>
+                <img className="petImg" src={model.userPicture}/>
                 <div className="pet">
                     <h2>MEET THE MAGICAL PET</h2>
-                    <h1>KIKO</h1>
-                    <h3>The mischievous Kiko accompanies Ahri as a vulpine embodiment of her charisma… and sass. Even unprompted, Kiko isn’t shy about saying how it really feels, though only Ahri can understand its unique language. As biting as the creature’s manners can sometimes be, it’s not too proud to turn down a good belly rub and cuddle. Just try to refrain from saying, “Aww.”</h3>
+                    <h1>{model.name}</h1>
+                    <h3>{model.description}</h3>
                 </div>
             </StyledInfoText>
 

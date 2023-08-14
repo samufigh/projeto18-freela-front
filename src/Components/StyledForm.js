@@ -37,7 +37,7 @@ export const StyledFormSignUp = styled.form`
 `
 
 export const StyledFormAddPet = styled.form`
-  margin-top: 100px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,6 +63,11 @@ export const StyledFormAddPet = styled.form`
   }
   h3{
     margin-right: 542px;
+    margin-top: 30px;
+    color: #FEB7FF;
+  }
+  span{
+    margin-right: 447px;
     margin-top: 30px;
     color: #FEB7FF;
   }

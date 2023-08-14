@@ -22,7 +22,7 @@ export default function MyPets(){
           Authorization: `Bearer ${token}`,
         },
     };
-    const res = apiAuth.pets(authentication);
+    const res = apiAuth.addPet(authentication);
     res.then((res) => {
         console.log(res.data)
       })

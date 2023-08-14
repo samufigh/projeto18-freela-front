@@ -5,6 +5,9 @@ import { StyledFormAddPet, StyledFormLogin } from "../../Components/StyledForm";
 import { StyledInputForm } from "../../Components/StyledInput";
 import StyledButton from "../../Components/StyledButton";
 import StyledTextArea from "../../Components/StyledTextArea";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import apiAuth from "../../services/ApiAuth";
 
 export default function AddPets(){
     const token = localStorage.token
@@ -20,7 +23,7 @@ export default function AddPets(){
           Authorization: `Bearer ${token}`,
         },
     };
-    const res = apiAuth.pets(authentication);
+    const res = apiAuth.addPet(authentication);
     res.then((res) => {
         console.log(res.data)
       })
@@ -48,6 +51,14 @@ export default function AddPets(){
                 <h3>Picture</h3>
                 <StyledInputForm
                     name="picture"
+                    placeholder="Picture"
+                    type="picture"
+                    required
+                />
+                <p>.</p>
+                <span>Picture with your pet</span>
+                <StyledInputForm
+                    name="pictureUserPet"
                     placeholder="Picture"
                     type="picture"
                     required
